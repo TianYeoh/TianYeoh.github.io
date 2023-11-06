@@ -6,15 +6,131 @@
   <link href="https://tianyeoh.github.io/atom.xml" rel="self"/>
   
   <link href="https://tianyeoh.github.io/"/>
-  <updated>2023-10-28T09:11:30.854Z</updated>
+  <updated>2023-11-06T12:01:42.554Z</updated>
   <id>https://tianyeoh.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>TianYeoh</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>(环境)Jetson Nano conda环境配置</title>
+    <link href="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20conda%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    <id>https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20conda%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-11-06T11:54:22.441Z</published>
+    <updated>2023-11-06T12:01:42.554Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>(环境)Jetson Nano conda环境配置</strong></p><h4 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">anaconda-navigator</span><br></pre></td></tr></table></figure><h4 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h4><p>配置bashrc文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure><p>在文件的最后一行加上</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:/home/vincent/anaconda3/bin</span><br><span class="line"></span><br><span class="line">注意这里最后的要是你的安装的目录</span><br></pre></td></tr></table></figure><p>最后修改完成后，运行</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure><h4 id="conda指令"><a href="#conda指令" class="headerlink" title="conda指令"></a>conda指令</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// 创建环境</span><br><span class="line">conda create -n (名字) python</span><br><span class="line"></span><br><span class="line">//激活、进入环境</span><br><span class="line">conda activate (名字)</span><br><span class="line"></span><br><span class="line">//退出环境</span><br><span class="line">conda deactivate</span><br><span class="line"></span><br><span class="line">//查看环境列表</span><br><span class="line">conda env list</span><br><span class="line"></span><br><span class="line">//删除环境</span><br><span class="line">conda env remove -n (名字)</span><br><span class="line"></span><br><span class="line">//将包安装到指定环境</span><br><span class="line">conda install -n env_name package</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//查看指定环境下已经安装的包</span><br><span class="line">conda list -n env_name</span><br><span class="line"></span><br><span class="line">//将使用conda安装的包安装的包全部导出</span><br><span class="line">conda env export &gt;environment.yaml</span><br><span class="line"></span><br><span class="line">//删除当前环境里的包</span><br><span class="line">conda uninstall package</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;(环境)Jetson Nano conda环境配置&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&quot;可视化&quot;&gt;&lt;a href=&quot;#可视化&quot; class=&quot;headerlink&quot; title=&quot;可视化&quot;&gt;&lt;/a&gt;可视化&lt;/h4&gt;&lt;figure class=&quot;high</summary>
+      
+    
+    
+    
+    
+    <category term="环境" scheme="https://tianyeoh.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(环境)Jetson Nano vnc环境配置问题</title>
+    <link href="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20vnc%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/"/>
+    <id>https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20vnc%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</id>
+    <published>2023-11-06T11:53:03.553Z</published>
+    <updated>2023-11-06T11:54:19.554Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>(环境)Jetson Nano vnc配置问题</strong></p><h3 id="1-安装VNC服务"><a href="#1-安装VNC服务" class="headerlink" title="1. 安装VNC服务"></a>1. 安装VNC服务</h3><p>首先在Jetson Nano桌面以下快捷键打开终端：<br>Ctrl + Alt + T</p><p>或，通过ssh远程到Jetson Nano的代码行，输入以下代码：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install vino</span><br></pre></td></tr></table></figure><h3 id="2-搭建VNC服务程序"><a href="#2-搭建VNC服务程序" class="headerlink" title="2. 搭建VNC服务程序"></a>2. 搭建VNC服务程序</h3><p>到用户主目录下，新创建bash执行文件</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line">nano openvino</span><br></pre></td></tr></table></figure><p>进入nano界面，将以下代码复制到新建文本下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">export</span> DISPLAY=:0</span><br><span class="line">gsettings <span class="built_in">set</span> org.gnome.Vino enabled <span class="literal">true</span></span><br><span class="line">gsettings <span class="built_in">set</span> org.gnome.Vino prompt-enabled <span class="literal">false</span></span><br><span class="line">gsettings <span class="built_in">set</span> org.gnome.Vino require-encryption <span class="literal">false</span></span><br><span class="line">/usr/lib/vino/vino-server &amp;</span><br></pre></td></tr></table></figure><p>然后快捷键，保存文本：<br>Ctrl + x</p><p>回到终端，修改openvino文件权限为可执行，并执行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x ~/openvino</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure><p>重启一下Jetson Nano</p><iframe id="aswift_2" name="aswift_2" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="689" height="173" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4027161775370512&amp;output=html&amp;h=173&amp;slotname=3449349715&amp;adk=1739154829&amp;adf=816003355&amp;pi=t.ma~as.3449349715&amp;w=689&amp;fwrn=4&amp;lmt=1699260664&amp;rafmt=11&amp;format=689x173&amp;url=https%3A%2F%2Fmakeronsite.com%2Fjetson_nano_vnc.html&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTE5LjAuMjE1MS40NCIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjExOS4wLjIxNTEuNDQiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMDUiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1699260663536&amp;bpp=1&amp;bdt=1181&amp;idt=530&amp;shv=r20231101&amp;mjsv=m202311010101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D1e073ddaf188fa2d%3AT%3D1699256847%3ART%3D1699256847%3AS%3DALNI_MbdqU4swRF9l1EMKZHXDSLAFhAZ6A&amp;gpic=UID%3D00000c80cce7d6fd%3AT%3D1699256847%3ART%3D1699256847%3AS%3DALNI_MaF8hO4FXr3oJZlObkqtW_n8UvB7w&amp;prev_fmts=0x0%2C689x173&amp;nras=1&amp;correlator=1570301766671&amp;frm=20&amp;pv=1&amp;ga_vid=387418753.1699256844&amp;ga_sid=1699260664&amp;ga_hid=679267354&amp;ga_fc=1&amp;rplot=4&amp;u_tz=480&amp;u_his=1&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=187&amp;ady=1951&amp;biw=1063&amp;bih=710&amp;scr_x=0&amp;scr_y=970&amp;eid=44759875%2C44759926%2C31079190%2C31079344%2C44807048%2C44807335%2C44807454%2C31078297%2C31079356%2C44795553%2C31079155&amp;oid=2&amp;pvsid=856908535566536&amp;tmod=1013750196&amp;wsm=1&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fcn.bing.com%2F&amp;fc=1920&amp;brdim=788%2C78%2C788%2C78%2C1920%2C0%2C1102%2C816%2C1078%2C725&amp;vis=1&amp;rsz=%7C%7CEebr%7C&amp;abl=CS&amp;pfx=0&amp;fu=1152&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=3&amp;uci=a!3&amp;btvi=1&amp;fsb=1&amp;xpc=B74VmS9CgI&amp;p=https%3A//makeronsite.com&amp;dtd=536" data-google-container-id="a!3" data-google-query-id="CIj1lKP_roIDFQRJwgUdhY0Pkw" data-load-complete="true" style="box-sizing: border-box; max-width: 100%; width: 689px; margin: 0px; line-height: 1; border: 0px; left: 0px; top: 0px; height: 173px;"></iframe><h3 id="3-开启VNC服务"><a href="#3-开启VNC服务" class="headerlink" title="3. 开启VNC服务"></a>3. 开启VNC服务</h3><p>重新进入Jetson Nano的命令行，运行程序，开启VNC服务</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/openvino</span><br></pre></td></tr></table></figure><p>（提示：以后每次开启系统或关闭VNC服务之后，需要运行此口令重新开启VNC服务）</p><p>报出提示“No such key “enabled”，忽略…<br>并如无意外出现以下运行提示：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">jetson@jetson:~$ 18/11/2019 13时39分54秒 Autoprobing TCP port <span class="keyword">in</span> (all) network interface</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv6://[::]:5900</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv4://0.0.0.0:5900</span><br><span class="line">18/11/2019 13时39分54秒 Autoprobing selected port 5900</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Re-binding socket to listen <span class="keyword">for</span> VNC connections on TCP port 5900 <span class="keyword">in</span> (all) interface</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv6://[::]:5900</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv4://0.0.0.0:5900</span><br><span class="line">18/11/2019 13时39分54秒 Clearing securityTypes</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Clearing securityTypes</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Advertising authentication <span class="built_in">type</span>: <span class="string">&#x27;No Authentication&#x27;</span> (1)</span><br><span class="line">18/11/2019 13时39分54秒 Re-binding socket to listen <span class="keyword">for</span> VNC connections on TCP port 5900 <span class="keyword">in</span> (all) interface</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv6://[::]:5900</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv4://0.0.0.0:5900</span><br><span class="line">18/11/2019 13时39分54秒 Clearing securityTypes</span><br><span class="line">18/11/2019 13时39分54秒 Clearing authTypes</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Advertising authentication <span class="built_in">type</span>: <span class="string">&#x27;No Authentication&#x27;</span> (1)</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;No Authentication&#x27;</span> (1)</span><br></pre></td></tr></table></figure><p><strong>以上代表我们的VNC服务已经成功开启！</strong></p><p>按Ctrl + c可返回口令行，继续进行其他口令操作<br>（这不会关闭VNC服务的，其进程已在后台持续运行当中）</p><h2 id="3-取得IP地址"><a href="#3-取得IP地址" class="headerlink" title="3. 取得IP地址"></a>3. 取得IP地址</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ifconfig | grep -A 1 wlan0</span><br><span class="line"></span><br><span class="line"><span class="comment">## 得到以下信息：</span></span><br><span class="line">wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.119  netmask 255.255.255.0  broadcast 192.168.199.255</span><br></pre></td></tr></table></figure><p>以上inet后面的192.168.199.119就是小编Jetson nano的ip地址</p><h2 id="4-打开VNC-Viewer"><a href="#4-打开VNC-Viewer" class="headerlink" title="4. 打开VNC Viewer"></a>4. 打开VNC Viewer</h2><p>接下来可以到我们电脑下载并打开<a href="https://www.realvnc.com/en/">VNC Viewer</a>了<br>跳出安全提示，按continue继续，<br><strong>看到用户界面了，成功！</strong><br><img src="https://img-blog.csdnimg.cn/20191118144723138.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JpbGxpbw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p><p>如果出现以下提示：<br>Reading version failed: not an RFB server?<br><img src="https://img-blog.csdnimg.cn/20191118144806370.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JpbGxpbw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>代表我们之前在Jetson nano并未能成功开启VNC服务，需要回到前面debug一下了，或给我们留意 &#x3D;)</p><iframe id="aswift_3" name="aswift_3" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="689" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4027161775370512&amp;output=html&amp;h=173&amp;slotname=3449349715&amp;adk=1739154829&amp;adf=3151284609&amp;pi=t.ma~as.3449349715&amp;w=689&amp;fwrn=4&amp;lmt=1699260664&amp;rafmt=11&amp;format=689x173&amp;url=https%3A%2F%2Fmakeronsite.com%2Fjetson_nano_vnc.html&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTE5LjAuMjE1MS40NCIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjExOS4wLjIxNTEuNDQiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMDUiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1699260663537&amp;bpp=1&amp;bdt=1182&amp;idt=550&amp;shv=r20231101&amp;mjsv=m202311010101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D1e073ddaf188fa2d%3AT%3D1699256847%3ART%3D1699260666%3AS%3DALNI_MbdqU4swRF9l1EMKZHXDSLAFhAZ6A&amp;gpic=UID%3D00000c80cce7d6fd%3AT%3D1699256847%3ART%3D1699260666%3AS%3DALNI_MaF8hO4FXr3oJZlObkqtW_n8UvB7w&amp;prev_fmts=0x0%2C689x173%2C689x173%2C157x600&amp;nras=1&amp;correlator=1570301766671&amp;frm=20&amp;pv=1&amp;ga_vid=387418753.1699256844&amp;ga_sid=1699260664&amp;ga_hid=679267354&amp;ga_fc=1&amp;rplot=4&amp;u_tz=480&amp;u_his=1&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=187&amp;ady=4980&amp;biw=1063&amp;bih=725&amp;scr_x=0&amp;scr_y=2111&amp;eid=44759875%2C44759926%2C31079190%2C31079344%2C44807048%2C44807335%2C44807454%2C31078297%2C31079356%2C44795553%2C31079155&amp;oid=2&amp;pvsid=856908535566536&amp;tmod=1013750196&amp;wsm=1&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fcn.bing.com%2F&amp;fc=1920&amp;brdim=788%2C78%2C788%2C78%2C1920%2C0%2C1102%2C816%2C1078%2C725&amp;vis=1&amp;rsz=%7C%7CEebr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=4&amp;uci=a!4&amp;btvi=2&amp;fsb=1&amp;xpc=DuSoUchFXd&amp;p=https%3A//makeronsite.com&amp;dtd=952" data-google-container-id="a!4" data-google-query-id="CM-arqP_roIDFclKwgUdaBkLFQ" data-load-complete="true" style="box-sizing: border-box; max-width: 100%; width: 689px; margin: 0px; line-height: 1; border: 0px; left: 0px; top: 0px; height: 0px;"></iframe><h2 id="5-关闭VNC服务"><a href="#5-关闭VNC服务" class="headerlink" title="5. 关闭VNC服务"></a>5. 关闭VNC服务</h2><p>如果我们需要关闭VNC服务，那我们得先找出vino-server后台程序编号是多少，然后将其kill掉。</p><p>回到Jetson Nano的口令行，输入以下：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep vino</span><br><span class="line"></span><br><span class="line"><span class="comment">#得到以下信息：</span></span><br><span class="line">jetbot        7096     1  0 13:39 pts/0    00:00:00 /usr/lib/vino/vino-server</span><br><span class="line">jetbot       10082  6770  0 13:48 pts/0    00:00:00 grep --color=auto vino</span><br></pre></td></tr></table></figure><p>以上7096就是我当前vnc服务程序运行的编号，<br>大家根据自己情况修改以下程序编号来kill掉这进程：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> 7096</span><br></pre></td></tr></table></figure><p>这样VNC服务就会关闭了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;(环境)Jetson Nano vnc配置问题&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;1-安装VNC服务&quot;&gt;&lt;a href=&quot;#1-安装VNC服务&quot; class=&quot;headerlink&quot; title=&quot;1. 安装VNC服务&quot;&gt;&lt;/a&gt;1. 安装VNC服务</summary>
+      
+    
+    
+    
+    
+    <category term="环境" scheme="https://tianyeoh.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(环境)Jetson Nano apt问题</title>
+    <link href="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20ftp%E9%85%8D%E7%BD%AE/"/>
+    <id>https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20ftp%E9%85%8D%E7%BD%AE/</id>
+    <published>2023-11-06T08:27:29.527Z</published>
+    <updated>2023-11-06T08:28:23.705Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="环境-Jetson-Nano-ftp配置"><a href="#环境-Jetson-Nano-ftp配置" class="headerlink" title="(环境)Jetson Nano ftp配置"></a>(环境)Jetson Nano ftp配置</h4><p>安装：sudo apt-get install vsftpd<br>配置：sudo vim &#x2F;etc&#x2F;vsftpd.conf<br>去掉以下配置项注释#：</p><p>  write_enable&#x3D;YES</p><p>  local_umask&#x3D;022</p><p>  ascii_upload_enable&#x3D;YES</p><p>  ascii_download_enable&#x3D;YES</p><p>启动：sudo &#x2F;etc&#x2F;init.d&#x2F;vsftpd restart</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;环境-Jetson-Nano-ftp配置&quot;&gt;&lt;a href=&quot;#环境-Jetson-Nano-ftp配置&quot; class=&quot;headerlink&quot; title=&quot;(环境)Jetson Nano ftp配置&quot;&gt;&lt;/a&gt;(环境)Jetson Nano ftp配置&lt;/h4</summary>
+      
+    
+    
+    
+    
+    <category term="环境" scheme="https://tianyeoh.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(环境)Jetson Nano 更换桌面环境问题</title>
+    <link href="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20%E6%9B%B4%E6%8D%A2%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/"/>
+    <id>https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20%E6%9B%B4%E6%8D%A2%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/</id>
+    <published>2023-11-06T07:41:15.466Z</published>
+    <updated>2023-11-06T07:46:16.214Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>(环境)Jetson Nano 更换桌面环境问题</strong></p><p>首先知道有哪些种类的桌面环境</p><ul><li><h5 id="GDM，gnome系列的图形管理器"><a href="#GDM，gnome系列的图形管理器" class="headerlink" title="GDM，gnome系列的图形管理器"></a>GDM，gnome系列的图形管理器</h5></li><li><h5 id="KDM-SDDM是KDE系列的图形管理器"><a href="#KDM-SDDM是KDE系列的图形管理器" class="headerlink" title="KDM,SDDM是KDE系列的图形管理器"></a>KDM,SDDM是KDE系列的图形管理器</h5></li><li><h5 id="LightDM-Xfce4"><a href="#LightDM-Xfce4" class="headerlink" title="LightDM - Xfce4"></a>LightDM - Xfce4</h5></li></ul><h4 id="检查当前是哪个环境"><a href="#检查当前是哪个环境" class="headerlink" title="检查当前是哪个环境"></a>检查当前是哪个环境</h4><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $XDG_CURRENT_DESKTOP</span><br></pre></td></tr></table></figure><figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[email protected]:~$ echo $XDG_CURRENT_DESKTOP</span><br><span class="line">ubuntu:GNOME</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/bin/*-session</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/X11/default-display-manager</span><br></pre></td></tr></table></figure><h4 id="切换环境"><a href="#切换环境" class="headerlink" title="切换环境"></a>切换环境</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure gdm3</span><br><span class="line">或</span><br><span class="line">sudo dpkg-reconfigure lightdm</span><br><span class="line">或</span><br><span class="line">sudo dpkg-reconfigure sddm</span><br></pre></td></tr></table></figure><h4 id="设置开机启动图形界面模式"><a href="#设置开机启动图形界面模式" class="headerlink" title="设置开机启动图形界面模式"></a>设置开机启动图形界面模式</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl get-default</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl set-default graphical.target由命令行模式更改为图形界面模式</span><br><span class="line"></span><br><span class="line">systemctl set-default multi-user.target由图形界面模式更改为命令行模式</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;(环境)Jetson Nano 更换桌面环境问题&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先知道有哪些种类的桌面环境&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;h5 id=&quot;GDM，gnome系列的图形管理器&quot;&gt;&lt;a href=&quot;#GDM，gnome系列的图形管理器&quot; clas</summary>
+      
+    
+    
+    
+    
+    <category term="环境" scheme="https://tianyeoh.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(环境)Jetson Nano apt问题</title>
+    <link href="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20apt%E9%97%AE%E9%A2%98/"/>
+    <id>https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20apt%E9%97%AE%E9%A2%98/</id>
+    <published>2023-11-06T07:32:14.695Z</published>
+    <updated>2023-11-06T07:41:05.087Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>(环境)Jetson Nano apt问题</strong></p><h2 id="apt-get-update问题"><a href="#apt-get-update问题" class="headerlink" title="apt-get update问题"></a>apt-get update问题</h2><h4 id="首先保证联网"><a href="#首先保证联网" class="headerlink" title="首先保证联网"></a>首先保证联网</h4><h4 id="清理缓存文件"><a href="#清理缓存文件" class="headerlink" title="清理缓存文件"></a>清理缓存文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo rm -rf /var/lib/apt/lists/* </span><br><span class="line">sudo rm -rf /var/lib/apt/lists/partial/*</span><br><span class="line">cd /var/cache/apt/archives  </span><br><span class="line">sudo rm -rf partial</span><br></pre></td></tr></table></figure><h4 id="更换国内源-这一步我没做，我的国外源挺好的"><a href="#更换国内源-这一步我没做，我的国外源挺好的" class="headerlink" title="更换国内源(这一步我没做，我的国外源挺好的)"></a>更换国内源(这一步我没做，我的国外源挺好的)</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#备份现有源</span><br><span class="line">sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak </span><br><span class="line"></span><br><span class="line">#查看当前版本</span><br><span class="line">cat /etc/issue  </span><br><span class="line"></span><br><span class="line">#修改文件，替换下面软件源，删除文件所有内容，替换对应版本的源，见Ubuntu国内源</span><br><span class="line">sudo vim /etc/apt/sources.list </span><br><span class="line"></span><br><span class="line">#更新列表</span><br><span class="line">sudo apt-get update </span><br></pre></td></tr></table></figure><p>更换的sources.list</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.163.com/ubuntu/ jammy main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.163.com/ubuntu/ jammy-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ jammy main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ jammy-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ jammy-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ jammy-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.163.com/ubuntu/ jammy-backports main restricted universe multiverse</span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="可以从这一步直接开始做【重装apt】【wget】"><a href="#可以从这一步直接开始做【重装apt】【wget】" class="headerlink" title="可以从这一步直接开始做【重装apt】【wget】"></a>可以从这一步直接开始做【重装apt】【wget】</h4><p>使用wget和dpkg直接</p><p>注意这里的网址，可以上去看一下，对应哪个版本的，然后看一下自己的架构是什么</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http://mirrors.163.com/debian/pool/main/a/apt/apt_1.6.1_amd64.deb</span><br><span class="line">sudo dpkg -i --force-all apt*.deb</span><br></pre></td></tr></table></figure><h4 id="完成后"><a href="#完成后" class="headerlink" title="完成后"></a>完成后</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">apt-get update</span><br><span class="line">apt update</span><br><span class="line">apt-get upgrade</span><br><span class="line">apt update</span><br><span class="line"></span><br><span class="line">之后的下载就可以使用了</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;(环境)Jetson Nano apt问题&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;apt-get-update问题&quot;&gt;&lt;a href=&quot;#apt-get-update问题&quot; class=&quot;headerlink&quot; title=&quot;apt-get update</summary>
+      
+    
+    
+    
+    
+    <category term="环境" scheme="https://tianyeoh.github.io/tags/%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
   
   <entry>
     <title>(基础)Hexo博客部署</title>
@@ -40,21 +156,6 @@
   </entry>
   
   <entry>
-    <title>(总结)本科阶段(大一大二大三)总结</title>
-    <link href="https://tianyeoh.github.io/2023/10/28/[%E6%80%BB%E7%BB%93]%E6%9C%AC%E7%A7%91%E9%98%B6%E6%AE%B5(%E5%A4%A7%E4%B8%80%E5%A4%A7%E4%BA%8C%E5%A4%A7%E4%B8%89)%E6%80%BB%E7%BB%93/"/>
-    <id>https://tianyeoh.github.io/2023/10/28/[%E6%80%BB%E7%BB%93]%E6%9C%AC%E7%A7%91%E9%98%B6%E6%AE%B5(%E5%A4%A7%E4%B8%80%E5%A4%A7%E4%BA%8C%E5%A4%A7%E4%B8%89)%E6%80%BB%E7%BB%93/</id>
-    <published>2023-10-28T07:59:45.879Z</published>
-    <updated>2023-10-28T09:13:02.469Z</updated>
-    
-    
-    
-    
-    
-    <category term="总结" scheme="https://tianyeoh.github.io/tags/%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
     <title>(基础)三顾Git 指令</title>
     <link href="https://tianyeoh.github.io/2023/10/28/[%E5%9F%BA%E7%A1%80]%E4%B8%89%E9%A1%BEGit%20%E6%8C%87%E4%BB%A4/"/>
     <id>https://tianyeoh.github.io/2023/10/28/[%E5%9F%BA%E7%A1%80]%E4%B8%89%E9%A1%BEGit%20%E6%8C%87%E4%BB%A4/</id>
@@ -73,6 +174,21 @@
     
     
     <category term="基础" scheme="https://tianyeoh.github.io/tags/%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>(总结)本科阶段(大一大二大三)总结</title>
+    <link href="https://tianyeoh.github.io/2023/10/28/[%E6%80%BB%E7%BB%93]%E6%9C%AC%E7%A7%91%E9%98%B6%E6%AE%B5(%E5%A4%A7%E4%B8%80%E5%A4%A7%E4%BA%8C%E5%A4%A7%E4%B8%89)%E6%80%BB%E7%BB%93/"/>
+    <id>https://tianyeoh.github.io/2023/10/28/[%E6%80%BB%E7%BB%93]%E6%9C%AC%E7%A7%91%E9%98%B6%E6%AE%B5(%E5%A4%A7%E4%B8%80%E5%A4%A7%E4%BA%8C%E5%A4%A7%E4%B8%89)%E6%80%BB%E7%BB%93/</id>
+    <published>2023-10-28T07:59:45.879Z</published>
+    <updated>2023-10-28T09:13:02.469Z</updated>
+    
+    
+    
+    
+    
+    <category term="总结" scheme="https://tianyeoh.github.io/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

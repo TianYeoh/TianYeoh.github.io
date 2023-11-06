@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>(环境)Jetson Nano vnc环境配置问题 | Hexo</title><meta name="author" content="TianYeoh"><meta name="copyright" content="TianYeoh"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="(环境)Jetson Nano vnc配置问题 1. 安装VNC服务首先在Jetson Nano桌面以下快捷键打开终端：Ctrl + Alt + T 或，通过ssh远程到Jetson Nano的代码行，输入以下代码： 12sudo apt updatesudo apt install vino    2. 搭建VNC服务程序到用户主目录下，新创建bash执行文件 12cdnano openvino">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(环境)Jetson Nano vnc环境配置问题">
+<meta property="og:url" content="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20vnc%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="(环境)Jetson Nano vnc配置问题 1. 安装VNC服务首先在Jetson Nano桌面以下快捷键打开终端：Ctrl + Alt + T 或，通过ssh远程到Jetson Nano的代码行，输入以下代码： 12sudo apt updatesudo apt install vino    2. 搭建VNC服务程序到用户主目录下，新创建bash执行文件 12cdnano openvino">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-11-06T11:53:03.553Z">
+<meta property="article:modified_time" content="2023-11-06T11:54:19.554Z">
+<meta property="article:author" content="TianYeoh">
+<meta property="article:tag" content="环境">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20vnc%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '(环境)Jetson Nano vnc环境配置问题',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-11-06 19:54:19'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">(环境)Jetson Nano vnc环境配置问题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-11-06T11:53:03.553Z" title="Created 2023-11-06 19:53:03">2023-11-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-11-06T11:54:19.554Z" title="Updated 2023-11-06 19:54:19">2023-11-06</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="(环境)Jetson Nano vnc环境配置问题"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><strong>(环境)Jetson Nano vnc配置问题</strong></p>
+<h3 id="1-安装VNC服务"><a href="#1-安装VNC服务" class="headerlink" title="1. 安装VNC服务"></a>1. 安装VNC服务</h3><p>首先在Jetson Nano桌面以下快捷键打开终端：<br>Ctrl + Alt + T</p>
+<p>或，通过ssh远程到Jetson Nano的代码行，输入以下代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install vino</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-搭建VNC服务程序"><a href="#2-搭建VNC服务程序" class="headerlink" title="2. 搭建VNC服务程序"></a>2. 搭建VNC服务程序</h3><p>到用户主目录下，新创建bash执行文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span></span><br><span class="line">nano openvino</span><br></pre></td></tr></table></figure>
+
+<p>进入nano界面，将以下代码复制到新建文本下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="built_in">export</span> DISPLAY=:0</span><br><span class="line">gsettings <span class="built_in">set</span> org.gnome.Vino enabled <span class="literal">true</span></span><br><span class="line">gsettings <span class="built_in">set</span> org.gnome.Vino prompt-enabled <span class="literal">false</span></span><br><span class="line">gsettings <span class="built_in">set</span> org.gnome.Vino require-encryption <span class="literal">false</span></span><br><span class="line">/usr/lib/vino/vino-server &amp;</span><br></pre></td></tr></table></figure>
+
+<p>然后快捷键，保存文本：<br>Ctrl + x</p>
+<p>回到终端，修改openvino文件权限为可执行，并执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x ~/openvino</span><br><span class="line">sudo reboot</span><br></pre></td></tr></table></figure>
+
+<p>重启一下Jetson Nano</p>
+<iframe id="aswift_2" name="aswift_2" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="689" height="173" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4027161775370512&amp;output=html&amp;h=173&amp;slotname=3449349715&amp;adk=1739154829&amp;adf=816003355&amp;pi=t.ma~as.3449349715&amp;w=689&amp;fwrn=4&amp;lmt=1699260664&amp;rafmt=11&amp;format=689x173&amp;url=https%3A%2F%2Fmakeronsite.com%2Fjetson_nano_vnc.html&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTE5LjAuMjE1MS40NCIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjExOS4wLjIxNTEuNDQiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMDUiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1699260663536&amp;bpp=1&amp;bdt=1181&amp;idt=530&amp;shv=r20231101&amp;mjsv=m202311010101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D1e073ddaf188fa2d%3AT%3D1699256847%3ART%3D1699256847%3AS%3DALNI_MbdqU4swRF9l1EMKZHXDSLAFhAZ6A&amp;gpic=UID%3D00000c80cce7d6fd%3AT%3D1699256847%3ART%3D1699256847%3AS%3DALNI_MaF8hO4FXr3oJZlObkqtW_n8UvB7w&amp;prev_fmts=0x0%2C689x173&amp;nras=1&amp;correlator=1570301766671&amp;frm=20&amp;pv=1&amp;ga_vid=387418753.1699256844&amp;ga_sid=1699260664&amp;ga_hid=679267354&amp;ga_fc=1&amp;rplot=4&amp;u_tz=480&amp;u_his=1&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=187&amp;ady=1951&amp;biw=1063&amp;bih=710&amp;scr_x=0&amp;scr_y=970&amp;eid=44759875%2C44759926%2C31079190%2C31079344%2C44807048%2C44807335%2C44807454%2C31078297%2C31079356%2C44795553%2C31079155&amp;oid=2&amp;pvsid=856908535566536&amp;tmod=1013750196&amp;wsm=1&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fcn.bing.com%2F&amp;fc=1920&amp;brdim=788%2C78%2C788%2C78%2C1920%2C0%2C1102%2C816%2C1078%2C725&amp;vis=1&amp;rsz=%7C%7CEebr%7C&amp;abl=CS&amp;pfx=0&amp;fu=1152&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=3&amp;uci=a!3&amp;btvi=1&amp;fsb=1&amp;xpc=B74VmS9CgI&amp;p=https%3A//makeronsite.com&amp;dtd=536" data-google-container-id="a!3" data-google-query-id="CIj1lKP_roIDFQRJwgUdhY0Pkw" data-load-complete="true" style="box-sizing: border-box; max-width: 100%; width: 689px; margin: 0px; line-height: 1; border: 0px; left: 0px; top: 0px; height: 173px;"></iframe>
+
+
+
+<h3 id="3-开启VNC服务"><a href="#3-开启VNC服务" class="headerlink" title="3. 开启VNC服务"></a>3. 开启VNC服务</h3><p>重新进入Jetson Nano的命令行，运行程序，开启VNC服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/openvino</span><br></pre></td></tr></table></figure>
+
+<p>（提示：以后每次开启系统或关闭VNC服务之后，需要运行此口令重新开启VNC服务）</p>
+<p>报出提示“No such key “enabled”，忽略…<br>并如无意外出现以下运行提示：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">jetson@jetson:~$ 18/11/2019 13时39分54秒 Autoprobing TCP port <span class="keyword">in</span> (all) network interface</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv6://[::]:5900</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv4://0.0.0.0:5900</span><br><span class="line">18/11/2019 13时39分54秒 Autoprobing selected port 5900</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Re-binding socket to listen <span class="keyword">for</span> VNC connections on TCP port 5900 <span class="keyword">in</span> (all) interface</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv6://[::]:5900</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv4://0.0.0.0:5900</span><br><span class="line">18/11/2019 13时39分54秒 Clearing securityTypes</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Clearing securityTypes</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Advertising authentication <span class="built_in">type</span>: <span class="string">&#x27;No Authentication&#x27;</span> (1)</span><br><span class="line">18/11/2019 13时39分54秒 Re-binding socket to listen <span class="keyword">for</span> VNC connections on TCP port 5900 <span class="keyword">in</span> (all) interface</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv6://[::]:5900</span><br><span class="line">18/11/2019 13时39分54秒 Listening IPv4://0.0.0.0:5900</span><br><span class="line">18/11/2019 13时39分54秒 Clearing securityTypes</span><br><span class="line">18/11/2019 13时39分54秒 Clearing authTypes</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;TLS&#x27;</span> (18)</span><br><span class="line">18/11/2019 13时39分54秒 Advertising authentication <span class="built_in">type</span>: <span class="string">&#x27;No Authentication&#x27;</span> (1)</span><br><span class="line">18/11/2019 13时39分54秒 Advertising security <span class="built_in">type</span>: <span class="string">&#x27;No Authentication&#x27;</span> (1)</span><br></pre></td></tr></table></figure>
+
+<p><strong>以上代表我们的VNC服务已经成功开启！</strong></p>
+<p>按Ctrl + c可返回口令行，继续进行其他口令操作<br>（这不会关闭VNC服务的，其进程已在后台持续运行当中）</p>
+<h2 id="3-取得IP地址"><a href="#3-取得IP地址" class="headerlink" title="3. 取得IP地址"></a>3. 取得IP地址</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ifconfig | grep -A 1 wlan0</span><br><span class="line"></span><br><span class="line"><span class="comment">## 得到以下信息：</span></span><br><span class="line">wlan0: flags=4163&lt;UP,BROADCAST,RUNNING,MULTICAST&gt;  mtu 1500</span><br><span class="line">        inet 192.168.199.119  netmask 255.255.255.0  broadcast 192.168.199.255</span><br></pre></td></tr></table></figure>
+
+<p>以上inet后面的192.168.199.119就是小编Jetson nano的ip地址</p>
+<h2 id="4-打开VNC-Viewer"><a href="#4-打开VNC-Viewer" class="headerlink" title="4. 打开VNC Viewer"></a>4. 打开VNC Viewer</h2><p>接下来可以到我们电脑下载并打开<a target="_blank" rel="noopener" href="https://www.realvnc.com/en/">VNC Viewer</a>了<br>跳出安全提示，按continue继续，<br><strong>看到用户界面了，成功！</strong><br><img src="https://img-blog.csdnimg.cn/20191118144723138.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JpbGxpbw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>如果出现以下提示：<br>Reading version failed: not an RFB server?<br><img src="https://img-blog.csdnimg.cn/20191118144806370.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0JpbGxpbw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>代表我们之前在Jetson nano并未能成功开启VNC服务，需要回到前面debug一下了，或给我们留意 &#x3D;)</p>
+<iframe id="aswift_3" name="aswift_3" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="689" height="0" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-4027161775370512&amp;output=html&amp;h=173&amp;slotname=3449349715&amp;adk=1739154829&amp;adf=3151284609&amp;pi=t.ma~as.3449349715&amp;w=689&amp;fwrn=4&amp;lmt=1699260664&amp;rafmt=11&amp;format=689x173&amp;url=https%3A%2F%2Fmakeronsite.com%2Fjetson_nano_vnc.html&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTUuMC4wIiwieDg2IiwiIiwiMTE5LjAuMjE1MS40NCIsbnVsbCwwLG51bGwsIjY0IixbWyJNaWNyb3NvZnQgRWRnZSIsIjExOS4wLjIxNTEuNDQiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMDUiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1699260663537&amp;bpp=1&amp;bdt=1182&amp;idt=550&amp;shv=r20231101&amp;mjsv=m202311010101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;cookie=ID%3D1e073ddaf188fa2d%3AT%3D1699256847%3ART%3D1699260666%3AS%3DALNI_MbdqU4swRF9l1EMKZHXDSLAFhAZ6A&amp;gpic=UID%3D00000c80cce7d6fd%3AT%3D1699256847%3ART%3D1699260666%3AS%3DALNI_MaF8hO4FXr3oJZlObkqtW_n8UvB7w&amp;prev_fmts=0x0%2C689x173%2C689x173%2C157x600&amp;nras=1&amp;correlator=1570301766671&amp;frm=20&amp;pv=1&amp;ga_vid=387418753.1699256844&amp;ga_sid=1699260664&amp;ga_hid=679267354&amp;ga_fc=1&amp;rplot=4&amp;u_tz=480&amp;u_his=1&amp;u_h=1080&amp;u_w=1920&amp;u_ah=1032&amp;u_aw=1920&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=187&amp;ady=4980&amp;biw=1063&amp;bih=725&amp;scr_x=0&amp;scr_y=2111&amp;eid=44759875%2C44759926%2C31079190%2C31079344%2C44807048%2C44807335%2C44807454%2C31078297%2C31079356%2C44795553%2C31079155&amp;oid=2&amp;pvsid=856908535566536&amp;tmod=1013750196&amp;wsm=1&amp;uas=0&amp;nvt=1&amp;ref=https%3A%2F%2Fcn.bing.com%2F&amp;fc=1920&amp;brdim=788%2C78%2C788%2C78%2C1920%2C0%2C1102%2C816%2C1078%2C725&amp;vis=1&amp;rsz=%7C%7CEebr%7C&amp;abl=CS&amp;pfx=0&amp;fu=128&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=4&amp;uci=a!4&amp;btvi=2&amp;fsb=1&amp;xpc=DuSoUchFXd&amp;p=https%3A//makeronsite.com&amp;dtd=952" data-google-container-id="a!4" data-google-query-id="CM-arqP_roIDFclKwgUdaBkLFQ" data-load-complete="true" style="box-sizing: border-box; max-width: 100%; width: 689px; margin: 0px; line-height: 1; border: 0px; left: 0px; top: 0px; height: 0px;"></iframe>
+
+
+
+<h2 id="5-关闭VNC服务"><a href="#5-关闭VNC服务" class="headerlink" title="5. 关闭VNC服务"></a>5. 关闭VNC服务</h2><p>如果我们需要关闭VNC服务，那我们得先找出vino-server后台程序编号是多少，然后将其kill掉。</p>
+<p>回到Jetson Nano的口令行，输入以下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep vino</span><br><span class="line"></span><br><span class="line"><span class="comment">#得到以下信息：</span></span><br><span class="line">jetbot        7096     1  0 13:39 pts/0    00:00:00 /usr/lib/vino/vino-server</span><br><span class="line">jetbot       10082  6770  0 13:48 pts/0    00:00:00 grep --color=auto vino</span><br></pre></td></tr></table></figure>
+
+<p>以上7096就是我当前vnc服务程序运行的编号，<br>大家根据自己情况修改以下程序编号来kill掉这进程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">kill</span> 7096</span><br></pre></td></tr></table></figure>
+
+<p>这样VNC服务就会关闭了。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://TianYeoh.github.io">TianYeoh</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20vnc%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/">https://tianyeoh.github.io/2023/11/06/[%E7%8E%AF%E5%A2%83]Jetson%20Nano%20vnc%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%8E%AF%E5%A2%83/">环境</a></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20conda%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="(环境)Jetson Nano conda环境配置"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">(环境)Jetson Nano conda环境配置</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20ftp%E9%85%8D%E7%BD%AE/" title="(环境)Jetson Nano apt问题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">(环境)Jetson Nano apt问题</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20ftp%E9%85%8D%E7%BD%AE/" title="(环境)Jetson Nano apt问题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-06</div><div class="title">(环境)Jetson Nano apt问题</div></div></a></div><div><a href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20apt%E9%97%AE%E9%A2%98/" title="(环境)Jetson Nano apt问题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-06</div><div class="title">(环境)Jetson Nano apt问题</div></div></a></div><div><a href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20conda%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="(环境)Jetson Nano conda环境配置"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-06</div><div class="title">(环境)Jetson Nano conda环境配置</div></div></a></div><div><a href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20%E6%9B%B4%E6%8D%A2%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/" title="(环境)Jetson Nano 更换桌面环境问题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-11-06</div><div class="title">(环境)Jetson Nano 更换桌面环境问题</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">TianYeoh</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">9</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85VNC%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">1. 安装VNC服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%90%AD%E5%BB%BAVNC%E6%9C%8D%E5%8A%A1%E7%A8%8B%E5%BA%8F"><span class="toc-number">2.</span> <span class="toc-text">2. 搭建VNC服务程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%BC%80%E5%90%AFVNC%E6%9C%8D%E5%8A%A1"><span class="toc-number">3.</span> <span class="toc-text">3. 开启VNC服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8F%96%E5%BE%97IP%E5%9C%B0%E5%9D%80"><span class="toc-number"></span> <span class="toc-text">3. 取得IP地址</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%89%93%E5%BC%80VNC-Viewer"><span class="toc-number"></span> <span class="toc-text">4. 打开VNC Viewer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%85%B3%E9%97%ADVNC%E6%9C%8D%E5%8A%A1"><span class="toc-number"></span> <span class="toc-text">5. 关闭VNC服务</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20conda%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" title="(环境)Jetson Nano conda环境配置">(环境)Jetson Nano conda环境配置</a><time datetime="2023-11-06T11:54:22.441Z" title="Created 2023-11-06 19:54:22">2023-11-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20vnc%E9%85%8D%E7%BD%AE%E9%97%AE%E9%A2%98/" title="(环境)Jetson Nano vnc环境配置问题">(环境)Jetson Nano vnc环境配置问题</a><time datetime="2023-11-06T11:53:03.553Z" title="Created 2023-11-06 19:53:03">2023-11-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20ftp%E9%85%8D%E7%BD%AE/" title="(环境)Jetson Nano apt问题">(环境)Jetson Nano apt问题</a><time datetime="2023-11-06T08:27:29.527Z" title="Created 2023-11-06 16:27:29">2023-11-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20%E6%9B%B4%E6%8D%A2%E6%A1%8C%E9%9D%A2%E7%8E%AF%E5%A2%83%E9%97%AE%E9%A2%98/" title="(环境)Jetson Nano 更换桌面环境问题">(环境)Jetson Nano 更换桌面环境问题</a><time datetime="2023-11-06T07:41:15.466Z" title="Created 2023-11-06 15:41:15">2023-11-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/11/06/%5B%E7%8E%AF%E5%A2%83%5DJetson%20Nano%20apt%E9%97%AE%E9%A2%98/" title="(环境)Jetson Nano apt问题">(环境)Jetson Nano apt问题</a><time datetime="2023-11-06T07:32:14.695Z" title="Created 2023-11-06 15:32:14">2023-11-06</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By TianYeoh</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
